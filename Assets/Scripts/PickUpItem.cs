@@ -9,6 +9,8 @@ public class PickUpItem : MonoBehaviour
     [SerializeField] float pickUpDistance = 1.5f;//먹어지는 거리
     [SerializeField] float ttl = 10f;//time to leave
 
+    public Item item;
+    public int count = 1;
 
     private void Awake()
     {
@@ -33,6 +35,16 @@ public class PickUpItem : MonoBehaviour
 
         if(distance<0.1f)
         {
+            //************** 이 코드는 이곳보다는 특정 컨트롤러를 만들어서 이동해주어야함
+            if(GameManager.instance.inventoryContainer != null)
+            {
+                GameManager.instance.inventoryContainer.Add(item, count);
+            }
+            else
+            {
+                Debug.LogWarning("게임 매니져에 인벤토리 컨테이너가 없습니다.");
+            }
+
             Destroy(gameObject);
         }
     }

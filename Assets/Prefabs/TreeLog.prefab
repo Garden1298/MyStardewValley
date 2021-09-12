@@ -98,3 +98,5 @@ MonoBehaviour:
   speed: 5
   pickUpDistance: 1.5
   ttl: 10
+  item: {fileID: 11400000, guid: f596a84571b915e49820647c8d9f11c0, type: 2}
+  count: 1
