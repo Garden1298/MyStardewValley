@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ItemDragAndDropController : MonoBehaviour
 {
@@ -24,6 +25,21 @@ public class ItemDragAndDropController : MonoBehaviour
         {
             //itemIcon의 위치를 마우스 위치로 지정
             iconTransform.position = Input.mousePosition;
+
+            if(Input.GetMouseButtonDown(0))
+            {
+                if(EventSystem.current.IsPointerOverGameObject()==false)
+                {
+                    //마우스 위치를 월드 위치로!
+                    Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    worldPosition.z = 0;
+
+                    ItemSpawnManager.instance.SpawnItem(worldPosition, itemSlot.item, itemSlot.count);
+
+                    itemSlot.Clear();
+                    itemIcon.SetActive(false);
+                }
+            }
         }
     }
 

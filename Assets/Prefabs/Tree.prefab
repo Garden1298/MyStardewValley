@@ -123,5 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpDrop: {fileID: 8293270833076807504, guid: ab648228949f8fa4392b6c5a5807c7a7, type: 3}
-  dropCount: 5
   spread: 0.7
+  item: {fileID: 11400000, guid: f596a84571b915e49820647c8d9f11c0, type: 2}
+  itemCountInOneDrop: 1
+  dropCount: 5

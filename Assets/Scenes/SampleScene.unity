@@ -1100,6 +1100,7 @@ GameObject:
   - component: {fileID: 416596441}
   - component: {fileID: 416596442}
   - component: {fileID: 416596443}
+  - component: {fileID: 416596444}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1122,6 +1123,7 @@ MonoBehaviour:
   player: {fileID: 356860560}
   inventoryContainer: {fileID: 11400000, guid: c0b603300c890584ab6693e3968953f5, type: 2}
   dragAndDropController: {fileID: 416596443}
+  itemSpawn: {fileID: 0}
 --- !u!4 &416596440
 Transform:
   m_ObjectHideFlags: 0
@@ -1224,6 +1226,19 @@ MonoBehaviour:
     item: {fileID: 0}
     count: 0
   itemIcon: {fileID: 265927564}
+--- !u!114 &416596444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416596438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646c7e0c85d7bad4ba565f701ccc70b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUpItemPrefab: {fileID: 8293270833076807504, guid: 1403394b66a705349841d10b0abb7025, type: 3}
 --- !u!1001 &420805383
 PrefabInstance:
   m_ObjectHideFlags: 0
