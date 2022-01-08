@@ -8,6 +8,7 @@ public class InventoryButton : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] Image icon;
     [SerializeField] Text text;
+    [SerializeField] Image highlight;
 
     int myIndex;
 
@@ -43,8 +44,12 @@ public class InventoryButton : MonoBehaviour, IPointerClickHandler
     //오브젝트를 클릭할때마다 발생
     public void OnPointerClick(PointerEventData eventData)
     {
-        ItemContainer inventory = GameManager.instance.inventoryContainer;
-        GameManager.instance.dragAndDropController.OnClick(inventory.slots[myIndex]);
-        transform.parent.GetComponent<InventoryPanel>().Show();
+        ItemPanel itemPanel = transform.parent.GetComponent<ItemPanel>();
+        itemPanel.OnClick(myIndex);
+    }
+
+    public void Highlight(bool _bool)
+    {
+        highlight.gameObject.SetActive(_bool);
     }
 }

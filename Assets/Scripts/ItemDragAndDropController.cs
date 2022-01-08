@@ -43,6 +43,7 @@ public class ItemDragAndDropController : MonoBehaviour
         }
     }
 
+    //internal : 어샘블리(같은 파일) 내부에서만 접근 가능
     internal void OnClick(ItemSlot itemSlot)
     {
         //인벤토리 슬롯이 비어있다면 데이터를 슬롯에 복사하고 인벤토리 슬롯 정보 지우기
