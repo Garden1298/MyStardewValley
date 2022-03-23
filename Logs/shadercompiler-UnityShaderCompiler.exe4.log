@@ -2,3 +2,5 @@ Base path: 'E:/Works/WorkTools/2020.3.8f1/Editor/Data', plugins path 'E:/Works/W
 Cmd: initializeCompiler
 
 Cmd: shutdown
+
+Quitting shader compiler process
